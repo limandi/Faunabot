@@ -1,0 +1,30 @@
+.home-catbot-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-catbot-content{
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    margin: auto; 
+}
+
+.home-catbot-greeting{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-catbot-greeting label{
+    margin-bottom: 10px;
+}
+
