@@ -2,14 +2,17 @@ import React from 'react';
 import './Catitem.css';
 import catAvatar from '../../../assets/images/fauna.png';
 
-const CatItem = () => {
+const CatItem = ({ text }) => {
+
     return (
         <div className='cat-item-container'>
             <img src={catAvatar} alt='cat-avatar' />
-            <div className= 'cat-item-messages'> 
-            <label>Mensaje</label>
-
+            <div   className= 'cat-item-messages'> 
+            { text.map((t, index) =>
+            <label key={index}> {t} </label>
+            )}
             </div>
+           
         </div>
     )
 
