@@ -7,6 +7,7 @@ const Home = ({ history }) => {
     return (
         <div className='home-catbot-container'>
             <div className='home-catbot-content'>
+     
                 <Cat history={history} />
                 <div className='home-catbot-greeting'>
                     <Fade opposite>

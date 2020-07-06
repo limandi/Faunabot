@@ -13,6 +13,12 @@
     height: 100%;
     position: absolute;
     margin: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
 }
 
 .home-catbot-greeting{
@@ -27,4 +33,5 @@
 .home-catbot-greeting label{
     margin-bottom: 10px;
 }
+
 
