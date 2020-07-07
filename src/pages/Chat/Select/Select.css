@@ -1,0 +1,38 @@
+.selector-container{
+    width: 100%;
+    height: auto;
+}
+
+.selector-content{
+    width: 80%;
+    height: fit-content;
+    background: #FCF3CF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 15px 0 10px 15px;
+    margin: 10px 0 10px auto;
+}
+
+.selector-options label{
+    background: #F7DC6F;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 10px;
+    justify-content: center;
+
+}
+
+.selector-options label:hover{
+    background: #F39C12;
+
+}

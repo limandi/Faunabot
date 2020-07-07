@@ -3,6 +3,7 @@ import './Chat.css';
 import CatItem from '../Chat/Catitem/Catitem';
 import UserItem from './UserItem/UserItem';
 import InputChat from './InputChat/InputChat';
+import Select from './Select/Select';
 
 const Chat = () => {
 
@@ -72,6 +73,7 @@ const Chat = () => {
             <div className='chatbot-chat-content'>
                 <div className='chatbot-chat'>
                     <div className='chatbot-chat-container-body'>
+                     <div className='chatbot-chat-body'>
                         { chat.map((message, index) =>
                         message.emmitter === 'Cat' ?
                         <CatItem 
@@ -86,6 +88,8 @@ const Chat = () => {
                         text={message.msg} /> 
  
                         )}
+                        <Select/>
+                     </div>
                     </div>
                     <div className='chatbot-chat-container-input'>
                         <InputChat
@@ -94,6 +98,7 @@ const Chat = () => {
                         sendMessage={sendMessage}
                         />
                     </div>
+                    
 
 
                 </div>
