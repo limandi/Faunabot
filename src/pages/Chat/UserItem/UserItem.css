@@ -8,12 +8,11 @@
 }
 
 .user-item-container label{
-    font-size: 14px;
+    font-size: 16px;
     color: #ffff;
-    border-radius: 5px;
-    background: #432b51;
+    border-radius: 5px 5px 0 5px;
+    background: #2D7B80;
     width: fit-content;
-    font-weight: bold;
     font-weight: normal;
     box-sizing: border-box;
     padding: 10px;

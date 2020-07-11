@@ -17,12 +17,11 @@
 
 .cat-item-container label {
     margin: 0 0 5px 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
-    background: #432b51;
+    background: #995DA2;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 5px;
     width: fit-content;
-    font-weight: bold;
     box-sizing: border-box;
 }

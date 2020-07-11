@@ -1,15 +1,18 @@
 import React from 'react';
 import './Select.css';
 
-const Select = () => {
+const Select = ({ options, handleSelectedOptions }) => {
     return (
         <div className='selector-content'>
             <div className='selector-container'>
-                <div className='selector-options'>
-                <label> Opcion 1 </label>
-                <label> Opcion 2 </label>
-                <label> Opcion 3 </label>
-                </div>
+                { options.map(op =>
+                    <div
+                    onClick={ (e) => handleSelectedOptions(op.id)}
+                     key={op.id} className='selector-options'>
+                    <label> {op.text} </label>
+                    </div>
+                    ) }
+                
             </div>
         </div>
 
