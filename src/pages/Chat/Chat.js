@@ -70,7 +70,7 @@ const Chat = () => {
 
     let options = [ 
     {
-        id: 'Qué haces?',
+        id: 'What are you doing?',
         text: 'Qué haces?',
     },
     /*
@@ -79,28 +79,28 @@ const Chat = () => {
         text: 'Mandame un meme',
     },*/
     {
-        id: 'Contame sobre vos',
+        id: 'Tell me about you',
         text: 'Contame sobre vos',
     },
 ];
 
-const [ interactions, setInteractions ] =useState([]);
+const [ interactions, setInteractions ] = useState([]);
 
 function handleSelectedOptions(value) {
 
     let result;
 
-    switch(value){
-        case 'Qué haces?':
+    switch(value) {
+        case 'What are you doing?':
             result = doing[Math.floor(Math.random() * doing.length)]
             if(result) {
                 setInteractions([ ...interactions, result.msg ])
             }
             break;
 
-            case 'Contame sobre vos':
+            case 'Tell me about you':
                 result = aboutMe[Math.floor(Math.random() * aboutMe.length)]
-                if(result){
+                if(result) {
                     setInteractions([ ...interactions, result.msg ])
                 }
                 break;
@@ -138,6 +138,22 @@ function handleSelectedOptions(value) {
                         handleSelectedOptions={handleSelectedOptions}
                         options={options} />
                         </Fade>
+                        }
+
+                        {
+                            interactions.length > 0 && interactions.map((interaction, index) =>
+                            <>
+                            <Fade left>
+                                <CatItem key={index} text={interaction}> </CatItem>
+                            </Fade>
+                            <Fade right>
+                            <Select 
+                            key={index}
+                            handleSelectedOptions={handleSelectedOptions}
+                            options={options} />
+                            </Fade>
+                            </>
+                            )
                         }
                         
                      </div>
