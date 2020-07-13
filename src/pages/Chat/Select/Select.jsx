@@ -8,7 +8,8 @@ const Select = ({ options, handleSelectedOptions }) => {
                 { options.map(op =>
                     <div
                     onClick={ (e) => handleSelectedOptions(op.id)}
-                     key={op.id} className='selector-options'>
+                     key={op.id} 
+                     className='selector-options'>
                     <label> {op.text} </label>
                     </div>
                     ) }
@@ -16,7 +17,7 @@ const Select = ({ options, handleSelectedOptions }) => {
             </div>
         </div>
 
-    )
+    );
 };
 
 export default Select;

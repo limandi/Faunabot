@@ -51,7 +51,7 @@ const Chat = () => {
             setMsg({ ...msg, msg:''});
             setTimeout(() => setOpenSelect(true), 600); 
         }
-    },[chat] );
+    }, [chat]);
 
 
     function getMeMessage(value) {
@@ -118,19 +118,16 @@ function handleSelectedOptions(value) {
                     <div className='chatbot-chat-container-body'>
                      <div className='chatbot-chat-body'>
                         { chat.map((message, index) =>
-                        message.emmitter === 'Cat' ?
+                        message.emmitter === 'Cat' ? ( 
                         <CatItem 
-                        key={index}
-                        text= {message.msg}/>
-
-
-                        :
-
+                        key={index}  text= {message.msg}/>
+                        ) : ( 
                         <UserItem 
                         key={index}
                         text={message.msg} /> 
+                        )
  
-                        )}
+                        )},
                         { openSelect &&
                         <Fade right> 
                         
@@ -144,13 +141,14 @@ function handleSelectedOptions(value) {
                             interactions.length > 0 && interactions.map((interaction, index) =>
                             <>
                             <Fade left>
-                                <CatItem key={index} text={interaction}> </CatItem>
+                                <CatItem key={index} text={interaction }> </CatItem>
                             </Fade>
                             <Fade right>
                             <Select 
                             key={index}
                             handleSelectedOptions={handleSelectedOptions}
-                            options={options} />
+                            options={options}
+                             />
                             </Fade>
                             </>
                             )
@@ -160,6 +158,7 @@ function handleSelectedOptions(value) {
                     </div>
                     <div className='chatbot-chat-container-input'>
                         <InputChat
+                        chat={chat}
                         msg={msg}
                         getMeMessage={getMeMessage}
                         sendMessage={sendMessage}
