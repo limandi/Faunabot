@@ -33,10 +33,9 @@ const Chat = () => {
             emmitter: 'Cat',
             msg: [ 
                 'Mucho gusto, ' + name + '!',
-                'Mi nombre es Fauna, soy un bot aún en desarrollo',
+                'Mi nombre es Fauna, soy un bot en desarrollo',
                 'Eso quiere decir que aún no estoy preparada para preguntas específicas',
-                'Lo que no significa que no podamos interactuar',
-                'Haceme una pregunta de la lista y con gusto te respondo!',
+                'Pero podés hacerme una pregunta de la lista y te respondo!',
 
             ]
         }

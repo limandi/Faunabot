@@ -16,7 +16,7 @@ export let doing = [
         msg: [ 'Nadie sabe de donde vengo, simplemente aparecí 🛸' ]
     },
     {
-        msg: [ 'Me encantan los vegetales!', 'Algunas veces robo espinaca', 'Otras veces como algunas hojitas de las platas del patio','shhh 🤫' ]
+        msg: [ 'Me encantan los vegetales!', 'Algunas veces robo espinaca', 'Otras veces como algunas hojitas de las plantas del patio','shhh 🤫' ]
     },
     {
         msg: [ 'Mi pasatiempo favorito es arañar zapatos!' ]
