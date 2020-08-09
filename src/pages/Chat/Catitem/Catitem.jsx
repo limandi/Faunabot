@@ -9,11 +9,13 @@ const CatItem = ({ text }) => {
         <div className='cat-item-container'>
             <img src={catAvatar} alt='cat-avatar' />
             <div   className= 'cat-item-messages'> 
-            <Fade right>
+            
             { text.map((t, index) =>
+            <Fade right>
             <label key={index}> {t} </label>
+            </Fade>
             )}
-               </Fade>
+               
             </div>
            
         </div>
